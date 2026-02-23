@@ -1,0 +1,37 @@
+{
+  "max_concurrent": 10,
+  "clipboard_enabled": false,
+  "clipboard_auto_add": false,
+  "download_folder": "D:/Projects/Downloads",
+  "overwrite_policy": "ask",
+  "notifications": true,
+  "theme": "dark",
+  "high_contrast": false,
+  "font_scale": 1.6,
+  "minimize_to_tray": true,
+  "retry_count": 2,
+  "retry_delay": 3,
+  "embed_thumbnail": true,
+  "embed_metadata": true,
+  "quality_choice": "best",
+  "audio_codec": "mp3",
+  "audio_bitrate": "192k",
+  "presets": {
+    "Default": {
+      "format_choice": "mp4",
+      "quality_choice": "2160p",
+      "audio_codec": "mp3",
+      "audio_bitrate": "192k",
+      "download_folder": "D:/Projects/Downloads",
+      "filename_template": "{title} - {uploader} [{date}]"
+    }
+  },
+  "append_quality_suffix": false,
+  "lock_ctrl_zoom": false,
+  "format_choice": "mp4",
+  "subtitles": false,
+  "auto_subtitles": false,
+  "subtitle_langs": "en.*",
+  "filename_template": "{title} - {uploader} [{date}]",
+  "active_preset": "Default"
+}
