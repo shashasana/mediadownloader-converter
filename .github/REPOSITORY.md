@@ -2,7 +2,7 @@
 
 ## 🎵 Media Downloader & Converter
 
-**Professional-grade media downloader and converter** with advanced audio quality options, smart format detection, and comprehensive documentation.
+**Simple media downloader and converter** with advanced audio quality options, smart format detection, and comprehensive documentation.
 
 ### What It Does
 - Downloads videos and audio from DRM-free sources (YouTube, Soundcloud, Bandcamp, etc.)
