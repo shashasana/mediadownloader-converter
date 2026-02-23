@@ -2,8 +2,6 @@
 
 ## Q1: "Update to have qualities for converting video formats to mp3 like best quality and below, sample rate."
 
-✅ **DONE!**
-
 You now have:
 - **7 quality presets** from 96k to 320k (plus V0/V2 VBR)
 - **8 sample rate options** from 8000 Hz to 48000 Hz
@@ -18,11 +16,7 @@ Location: When you convert to MP3 format, you'll see:
 
 ## Q2: "For the quality of mp3, if I set it to 320kbps, or best, what do you use in best?"
 
-**Great question!**
-
-### What I Implemented:
-
-**"Best" Quality for MP3** has TWO options now:
+### Two Options Available:
 
 #### Option 1: **320 kbps CBR (Maximum)**
 - Uses all bits constantly at highest quality
@@ -39,7 +33,7 @@ Location: When you convert to MP3 format, you'll see:
 - **For**: Archiving, listening to high-quality audio, professional use
 - **FFmpeg**: `-q:a 0`
 
-### My Recommendation:
+### Recommendation:
 Use **V0 VBR** instead of 320k CBR because:
 1. Audio quality is **identical** (transparent)
 2. Files are **25% smaller** (~9 MB vs 12 MB per 10 minutes)
@@ -50,9 +44,7 @@ Use **V0 VBR** instead of 320k CBR because:
 
 ## Q3: "Can you add on audio quality to have a Variable Bit Rate V0 on it?"
 
-✅ **DONE!**
-
-### What Was Added:
+### V0 VBR Implementation
 
 **V0 VBR** is now available as a quality preset option!
 
@@ -227,6 +219,4 @@ This gives you:
 - ✅ 25% file size savings vs 320k CBR
 - ✅ Industry standard for music archiving
 - ✅ Professional audiophile choice
-
-**That answers your request: V0 VBR has been added!**
 

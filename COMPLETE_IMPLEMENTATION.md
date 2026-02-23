@@ -2,11 +2,6 @@
 
 ## ✅ What Was Completed
 
-### Your Request:
-> "Update to have qualities for converting video formats to mp3 like best quality and below, sample rate. For the quality of mp3, if I set it to 320kbps, or best, what do you use in best? Can you add on audio quality to have a Variable Bit Rate V0 on it?"
-
-### What Was Delivered:
-
 #### 1️⃣ **7 MP3 Quality Presets** (Best Quality and Below)
 - ✅ **V0 VBR** - Transparent quality (Variable Bit Rate) ← WHAT YOU ASKED FOR
 - ✅ **320 kbps CBR** - Maximum quality (Constant Bit Rate)

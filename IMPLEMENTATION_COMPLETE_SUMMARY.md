@@ -1,10 +1,5 @@
 # 🎉 Smart File Converter - Implementation Complete!
 
-## What You Asked For
-
-You requested:
-> "if i add a file, for ex, mp3, it should only show the possible format that it can download... if i add multiple files to convert, should show multiple output names for each. and should show individual output preview of each."
-
 ## What You Got ✓
 
 ### Feature 1: Smart Format Filtering ✓
