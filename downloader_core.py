@@ -741,6 +741,33 @@ def convert_file(input_file: str, output_format: str, quality: str, sample_rate:
             log(f"Image conversion failed: {e}\n")
             return False
 
+    # Document conversion (PDF to DOCX)
+    if input_ext == "pdf" and output_format == "docx":
+        try:
+            from PyPDF2 import PdfReader
+            from docx import Document
+            
+            log("Converting PDF to DOCX (Text extraction)...\n")
+            reader = PdfReader(input_file)
+            doc = Document()
+            
+            for i, page in enumerate(reader.pages):
+                text = page.extract_text()
+                if text:
+                    doc.add_paragraph(text)
+                if i < len(reader.pages) - 1:
+                    doc.add_page_break()
+                    
+            doc.save(output_file)
+            log(f"✓ Converted PDF to DOCX: {os.path.basename(output_file)}\n")
+            return True
+        except ImportError:
+            log("Missing required libraries: PyPDF2, python-docx. Please check installation.\n")
+            return False
+        except Exception as e:
+            log(f"PDF to DOCX conversion failed: {e}\n")
+            return False
+
     # ffmpeg conversion for audio/video and other supported formats
     if not ffmpeg_path or not os.path.exists(ffmpeg_path):
         log("ffmpeg not found. Check FFMPEG_PATH in config.py\n")

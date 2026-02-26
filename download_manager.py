@@ -66,7 +66,8 @@ class DownloadManager:
     def add_task(self, task: DownloadTask) -> bool:
         """Add a task to the queue"""
         with self._lock:
-            if len(self.queue) + len(self.active_downloads) >= self.max_downloads:
+            # Separate max queue limit from max concurrent limit
+            if len(self.queue) + len(self.active_downloads) >= 1000:
                 return False
             self.queue.append(task)
             self._notify("queue_updated")
@@ -162,7 +163,7 @@ class DownloadManager:
     def is_queue_available(self) -> bool:
         """Check if queue has space"""
         with self._lock:
-            return len(self.queue) + len(self.active_downloads) < self.max_downloads
+            return len(self.queue) + len(self.active_downloads) < 1000
     
     def get_active_count(self) -> int:
         """Get number of active downloads"""

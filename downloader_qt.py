@@ -998,9 +998,9 @@ class DownloaderAppQt(QMainWindow):
         )
 
     def _update_button_visibility(self, url_text):
-        """Show Add to Queue only if multiple URLs, otherwise just Download Now"""
+        """Show Add to Queue when there are URLs"""
         urls = self.url_frame.get_urls()
-        if len(urls) > 1:
+        if len(urls) >= 1:
             self.add_queue_btn.show()
         else:
             self.add_queue_btn.hide()
@@ -1145,7 +1145,7 @@ class DownloaderAppQt(QMainWindow):
         worker.single_thumbnail_ready.connect(self.on_single_thumbnail_ready)
         worker.single_error.connect(self.on_single_preview_error)
         worker.log_signal.connect(self.add_log_safe)
-        worker.finished.connect(lambda: setattr(self, "_preview_in_progress", False))
+        worker.finished.connect(lambda *args: setattr(self, "_preview_in_progress", False))
         worker.start()
         
         # Keep reference
@@ -1441,7 +1441,7 @@ class DownloaderAppQt(QMainWindow):
             worker = DownloadWorker(task, self.manager, self.get_download_settings())
             worker.progress_signal.connect(self.progress_signal.emit)
             worker.log_signal.connect(self.add_log_safe)
-            worker.completed_signal.connect(lambda success: None)  # Handled by manager
+            worker.completed_signal.connect(lambda *args: None)  # Handled by manager
             worker.start()
             
             # Keep reference
@@ -1488,7 +1488,7 @@ class DownloaderAppQt(QMainWindow):
                     worker = DownloadWorker(task, self.manager, self.get_download_settings())
                     worker.progress_signal.connect(self.progress_signal.emit)
                     worker.log_signal.connect(self.add_log_safe)
-                    worker.completed_signal.connect(lambda success: None)  # Handled by manager
+                    worker.completed_signal.connect(lambda *args: None)  # Handled by manager
                     worker.start()
                     
                     # Keep reference
